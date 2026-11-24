@@ -3,78 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Releases — навчальний макет</title>
+    <title>News — навчальний макет</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
         <section class="releases" aria-labelledby="releases-title">
             <div class="releases-heading">
-                <h1 id="releases-title">News Releases</h1>
-                <a href="https://www.nasa.gov/news/" target="_blank" rel="noopener noreferrer">Усі новини</a>
+                <h1 id="releases-title">НОВИНИ</h1>
+                <a href="https://www.pravda.com.ua/news/eurointegration/#section_menu" target="_blank" rel="noopener noreferrer">Усі новини</a>
+            </div>
+
+            <!-- Панель фільтрів і пошуку -->
+            <div class="news-controls">
+                <div class="filter-group" role="group" aria-label="Фільтр новин за категоріями">
+                    <button type="button" class="filter-btn filter-btn--active">Усі новини</button>
+                    <button type="button" class="filter-btn">Україна</button>
+                    <button type="button" class="filter-btn">Світ</button>
+                    <button type="button" class="filter-btn">Політика</button>
+                </div>
+
+                <form class="search-form" action="#" method="get">
+                    <label for="news-search" class="visually-hidden">Пошук новин</label>
+                    <div class="search-input-wrap">
+                        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="search"
+                               id="news-search"
+                               name="q"
+                               class="search-input"
+                               placeholder="Пошук за темою...">
+                    </div>
+                    <button type="submit" class="search-btn" aria-label="Шукати">Знайти</button>
+                </form>
             </div>
 
             <div class="release-grid">
                 <!-- Велика ліва картка (2 колонки x 2 рядки) -->
                 <article class="release-card release-card--lead">
-                    <img src="images/release1.jpg" alt="Вид Землі з орбіти під час космічної місії">
+                    <img src="images/news1.jpg" alt="Зустріч Зеленського та Мадяра">
                     <div class="release-content">
-                        <span class="release-type">BLOG • 2 ХВ ЧИТАННЯ</span>
-                        <h2>Підготовка екіпажу до нової орбітальної місії</h2>
+                        <span class="release-type">NEWS • 2 ХВ ЧИТАННЯ</span>
+                        <h2>Зеленський і Мадяр в Ужгороді і вшанували пам’ять полеглих українських захисників</h2>
                     </div>
                 </article>
 
                 <!-- Висока центральна картка (1 колонка x 2 рядки) -->
                 <article class="release-card">
-                    <img src="images/release2.jpg" alt="Космічний апарат у глибокому космосі">
+                    <img src="images/news2.jpg" alt="Молода у суді">
                     <div class="release-content">
-                        <span class="release-type">NEWS RELEASE • 3 ХВ ЧИТАННЯ</span>
-                        <h2>Запуск автоматичної станції для дослідження далеких об'єктів</h2>
+                        <span class="release-type">NEWS • 3 ХВ ЧИТАННЯ</span>
+                        <h2>Сутички в Петропавлівській Борщагівці: апеляційний суд залишив псевдомедикиню Молоду під вартою</h2>
                     </div>
                 </article>
 
                 <!-- Мала картка праворуч угорі -->
                 <article class="release-card">
-                    <img src="images/release3.jpg" alt="Інженери тестують обладнання в лабораторії">
+                    <img src="images/news3.jpg" alt="Рютте і Трамп">
                     <div class="release-content">
-                        <span class="release-type">NEWS RELEASE • 4 ХВ ЧИТАННЯ</span>
-                        <h2>Нові випробування систем життєзабезпечення</h2>
+                        <span class="release-type">NEWS • 2 ХВ ЧИТАННЯ</span>
+                        <h2>Рютте відвідає США для зустрічі з Трампом</h2>
                     </div>
                 </article>
 
                 <!-- Мала картка праворуч унизу -->
                 <article class="release-card">
-                    <img src="images/release4.jpg" alt="Супутниковий знімок поверхні планети">
+                    <img src="images/news4.jpg" alt="Рада Європи">
                     <div class="release-content">
                         <span class="release-type">BLOG • 3 ХВ ЧИТАННЯ</span>
-                        <h2>Аналіз супутникових даних та кліматичних змін</h2>
+                        <h2>В ЄС обговорять фінансування України на 2027 рік і подальші роки</h2>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Окрема секція «Інші новини» -->
-        <section class="more-releases" aria-labelledby="more-releases-title">
-            <div class="releases-heading">
-                <h2 id="more-releases-title">Інші новини</h2>
-            </div>
+        <!-- Секція підписки на розсилку -->
+        <section class="subscribe" aria-labelledby="subscribe-title">
+            <div class="subscribe-container">
+                <div class="subscribe-info">
+                    <h2 id="subscribe-title">Будьте в курсі головних подій</h2>
+                    <p>Щотижневий дайджест найважливіших новин України та світу, аналітики та оглядів прямо на вашу пошту.</p>
+                </div>
 
-            <div class="more-grid">
-                <article class="release-card release-card--compact">
-                    <img src="images/release5.jpg" alt="Ракета-носій на стартовому майданчику">
-                    <div class="release-content">
-                        <span class="release-type">NEWS RELEASE • 5 ХВ ЧИТАННЯ</span>
-                        <h3>Підготовка стартового комплексу до наступного пуску</h3>
-                    </div>
-                </article>
+                <form class="subscribe-form" action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="user-name">Ваше ім'я</label>
+                            <input type="text"
+                                   id="user-name"
+                                   name="name"
+                                   placeholder="Дмитро"
+                                   required
+                                   minlength="2">
+                        </div>
 
-                <article class="release-card release-card--compact">
-                    <img src="images/release6.jpg" alt="Астрономічна обсерваторія під зоряним небом">
-                    <div class="release-content">
-                        <span class="release-type">BLOG • 2 ХВ ЧИТАННЯ</span>
-                        <h3>Спостереження за метеорним потоком з наземних обсерваторій</h3>
+                        <div class="form-group">
+                            <label for="user-email">Електронна пошта</label>
+                            <input type="email"
+                                   id="user-email"
+                                   name="email"
+                                   placeholder="name@example.com"
+                                   required>
+                        </div>
                     </div>
-                </article>
+
+                    <div class="form-group">
+                        <label for="news-topic">Яка тема цікавить найбільше?</label>
+                        <select id="news-topic" name="topic">
+                            <option value="all">Усі новини та дайджести</option>
+                            <option value="ukraine">Новини України</option>
+                            <option value="world">Міжнародна політика та світ</option>
+                            <option value="eurointegration">Євроінтеграція та економіка</option>
+                        </select>
+                    </div>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="agree" required>
+                        <span>Погоджуюся отримувати розсилку та приймаю умови конфіденційності</span>
+                    </label>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn--primary">Підписатися</button>
+                        <button type="reset" class="btn btn--outline">Очистити</button>
+                        <button type="button" class="btn btn--outline" disabled>Зберегти чернетку</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
